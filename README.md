@@ -35,6 +35,6 @@ FloatingLabelInput.propTypes = {
 ```
 
 And It will look like below
-
+![Alt Text](https://github.com/isaaclem/floating-label-input/tree/master/example/documentation.gif)
 
 Feel free to Raise PR should you wish to contribute.
