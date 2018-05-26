@@ -1,0 +1,25 @@
+{
+  "name": "floating-label-input",
+  "version": "1.0.0",
+  "description": "Floating lable input in react native",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaaclem/floating-label-input.git"
+  },
+  "keywords": [
+    "react-native",
+    "floating",
+    "label",
+    "input"
+  ],
+  "author": "Isaac Lem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaaclem/floating-label-input/issues"
+  },
+  "homepage": "https://github.com/isaaclem/floating-label-input#readme"
+}
