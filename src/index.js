@@ -4,8 +4,9 @@ import {
   TextInput,
   Animated
 } from 'react-native';
+import PropTypes from 'prop-types';
 
-class FloatingLabelInput extends Component {
+export default class FloatingLabelInput extends Component {
   state = {
     isFocused: false,
   };
@@ -25,31 +26,39 @@ class FloatingLabelInput extends Component {
   handleBlur = () => this.setState({ isFocused: false });
 
   render() {
-    const { label, ...props } = this.props;
+    const { 
+      label, 
+      sourceColor, 
+      targetColor, 
+      fontColor, 
+      labelSize, 
+      ...props 
+    } = this.props;
+
     const styles = {
       labelStyle: {
         position: 'absolute',
         left: 2,
         top: this.animatedIsFocused.interpolate({
           inputRange: [0, 1],
-          outputRange: [18, 0],
+          outputRange: [labelSize, 0],
         }),
         fontSize: this.animatedIsFocused.interpolate({
           inputRange: [0, 1],
-          outputRange: [17, 14],
+          outputRange: [(labelSize - 1), (labelSize - 4)],
         }),
         color: this.animatedIsFocused.interpolate({
           inputRange: [0, 1],
-          outputRange: ['#aaa', 'red'],
+          outputRange: [sourceColor, targetColor],
         }),
       },
       textInputStyle: { 
         height: 26, 
-        fontSize: 18, 
-        color: '#000',
+        fontSize: labelSize, 
+        color: fontColor,
         marginTop: 2,
         borderBottomWidth: !this.state.isFocused ? 1 : 1.5, 
-        borderBottomColor: !this.state.isFocused ? '#000' : 'red'
+        borderBottomColor: !this.state.isFocused ? fontColor : targetColor
       },
     };
     
@@ -73,4 +82,19 @@ class FloatingLabelInput extends Component {
   }
 }
 
-export { FloatingLabelInput };
+FloatingLabelInput.propTypes = {
+  label: PropTypes.any.isRequired,
+  sourceColor: PropTypes.string,
+  targetColor: PropTypes.string,
+  fontColor: PropTypes.string,
+  labelSize: PropTypes.number
+};
+
+FloatingLabelInput.defaultProps = {
+  label: '', 
+  sourceColor: '#aaa', 
+  targetColor: 'green', 
+  fontColor: '#000', 
+  labelSize: 18,
+};
+
