@@ -1,6 +1,6 @@
 {
   "name": "floating-label-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Floating lable input in react native",
   "main": "src/index.js",
   "scripts": {
