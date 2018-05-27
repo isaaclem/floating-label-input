@@ -53,7 +53,7 @@ export default class FloatingLabelInput extends Component {
         }),
       },
       textInputStyle: { 
-        height: 26, 
+        height: (labelSize + 1), 
         fontSize: labelSize, 
         color: fontColor,
         marginTop: 2,
@@ -63,7 +63,7 @@ export default class FloatingLabelInput extends Component {
     };
     
     return (
-      <View behavior="padding" style={{ paddingTop: 18 }}>
+      <View behavior="padding" style={{ paddingTop: labelSize + 1 }}>
         <Animated.Text style={styles.labelStyle}>
           {label}
         </Animated.Text>
@@ -73,8 +73,6 @@ export default class FloatingLabelInput extends Component {
           style={styles.textInputStyle}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
-          autoCorrect={false}
-          autoCapitalize="none"
           blurOnSubmit
         />
       </View>
