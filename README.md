@@ -1,5 +1,7 @@
 # floating-label-input
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/isaaclem/floating-label-input/issues) [![HitCount](http://hits.dwyl.io/isaaclem/floating-label-input.svg)](http://hits.dwyl.io/isaaclem/floating-label-input) [![npm version](https://badge.fury.io/js/floating-label-input.svg)](https://badge.fury.io/js/floating-label-input)
+
 This package lets you create a animated floating label text input.
 
 
